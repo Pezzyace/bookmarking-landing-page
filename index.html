@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Bookmark landing page</title>
   <style>
@@ -29,9 +32,9 @@
       <button class="text-white bg-[#fa5757] px-10 py-3 rounded uppercase border border-solid border-transparent  hover:text-[#fa5757] hover:border-[#fa5757] hover:bg-white">Login</button>
     </div>
   </nav>
-  <nav class="hidden items-center justify-between mobile-nav">
+  <nav class="hidden w-10/12 m-auto h-[70px] items-center justify-between mobile-nav">
     <img src="images/logo-bookmark.svg" alt="" class="" id="">
-    <img src="images/icon-hamburger.svg" alt="" class="" id="hamburger">
+    <img src="images/icon-hamburger.svg" alt="" class="cursor-pointer" id="hamburger">
     <div class="fixed top-0 bottom-0 left-0 right-0 p-4 bg-[#252b46e9] hidden z-[100]" id="navigation">
       <div class="flex flex-col gap-[20px]">
         <div class="flex justify-between">
@@ -53,11 +56,11 @@
     </div>
   </nav>
   <main class="my-24">
-    <div class="px-40 pb-24 grid grid-cols-2 gap-[70px] items-center">
-      <div class="">
-        <h1 class="text-[35px] text-[#252b46] mb-6 font-[700] w-8/12 tracking-0">A Simple Bookmark Manager</h1>
-        <p class="text-[#9194a1] w-8/12 text-[14px] mb-8">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-        <div class="flex gap-[10px]">
+    <div class="px-40 pb-24 grid grid-cols-2 gap-[70px] items-center hero">
+      <div class="hero-bottom">
+        <h1 class="text-[35px] text-[#252b46] mb-6 font-[700] w-8/12 tracking-0 hero-head">A Simple Bookmark Manager</h1>
+        <p class="text-[#9194a1] w-8/12 text-[14px] mb-8 hero-body">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+        <div class="flex gap-[10px] hero-btn">
           <button class="px-8 py-3 text-white bg-[#5469de] rounded cursor-pointer border border-solid border-transparent  hover:text-[#5469de] hover:border-[#5469de] hover:bg-white">Get it on Chrome</button>
           <button class="px-8 py-3 text-[#252b46] bg-[#5469de27] rounded cursor-pointer border border-solid border-transparent  hover:text-[#000] hover:border-[#000] hover:bg-white">Get it on Firefox</button>
         </div>
@@ -65,21 +68,21 @@
       <div class="relative">
         <img src="images/illustration-hero.svg" alt="" class="relative z-[70] w-full">
       </div>
-      <div class="absolute h-[24rem] w-[420px] rounded-bl-[50%] rounded-tl-[50%] bg-[#5469de] top-[250px] right-0 z-[20]"></div>
+      <div class="absolute h-[24rem] w-[420px] rounded-bl-[50%] rounded-tl-[50%] bg-[#5469de] top-[250px] right-0 z-[20] bg1"></div>
     </div>
     <div class="w-10/12 m-auto flex flex-col items-center justify-center">
       <h2 class="text-[30px] text-[#252b46] mb-7 font-[700]">Features</h2>
-      <p class="w-4/12 m-auto text-center text-[13px] text-[#9194a1] pb-12">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+      <p class="w-4/12 m-auto text-center text-[13px] text-[#9194a1] pb-12 features-body font-[400]">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
     </div>
     <div class="">
-      <div class="flex w-4/12 m-auto justify-center mb-16 border-b border-solid border-[#5469de27]">
-        <li class="list-none px-8 py-5 cursor-pointer border-b-4 border-solid border-[#fa5757] hover:text-[#fa5757]" id="bookmarking">Simple Bookmarking</li>
-        <li class="list-none px-8 py-5 cursor-pointer border-b-4 border-solid border-transparent hover:text-[#fa5757]" id="speddy">Speedy Searching</li>
-        <li class="list-none px-8 py-5 cursor-pointer border-b-4 border-solid border-transparent hover:text-[#fa5757]" id="sharing">Easy Sharing</li>
+      <div class="flex w-4/12 m-auto justify-center mb-16 border-b border-solid border-[#5469de27] features-slider">
+        <li class="list-none px-8 py-5 cursor-pointer border-b-4 border-solid border-[#fa5757] hover:text-[#fa5757] features-slider-link" id="bookmarking">Simple Bookmarking</li>
+        <li class="list-none px-8 py-5 cursor-pointer border-b-4 border-solid border-transparent hover:text-[#fa5757] features-slider-link" id="speddy">Speedy Searching</li>
+        <li class="list-none px-8 py-5 cursor-pointer border-b-4 border-solid border-transparent hover:text-[#fa5757] features-slider-link" id="sharing">Easy Sharing</li>
       </div>
       <div class="relative mb-24">
-        <div class="absolute h-[24rem] w-[420px] rounded-br-[50%] rounded-tr-[50%] bg-[#5469de] bottom-0 left-0 z-[20]"></div>
-        <div class="px-40 pb-24 grid grid-cols-2 gap-[70px] items-center">
+        <div class="absolute h-[24rem] w-[420px] rounded-br-[50%] rounded-tr-[50%] bg-[#5469de] bottom-0 left-0 z-[20] bg2"></div>
+        <div class="px-40 pb-24 grid grid-cols-2 gap-[70px] items-center features-container">
           <div class="relative">
             <img src="images/illustration-features-tab-1.svg" alt="" class="relative z-[70] w-full" id="section-one-img">
             <img src="images/illustration-features-tab-2.svg" alt="" class="relative z-[70] w-full hidden" id="section-two-img">
@@ -88,7 +91,7 @@
           <div class="">
             <div class="" id="section-one">
               <h2 class="text-[25px] text-[#252b46] mb-7 font-[700]">Bookmark in one click</h2>
-              <p class="w-8/12 text-[15px] text-[#9194a1] pb-12">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+              <p class="w-8/12 text-[15px] text-[#9194a1] pb-12 features-container-body">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
               <button class="px-8 py-3 text-white bg-[#5469de] rounded cursor-pointer border border-solid border-transparent  hover:text-[#5469de] hover:border-[#5469de] hover:bg-white">More Info</button>
             </div>
             <div class="hidden" id="section-two">
@@ -218,7 +221,84 @@
       .mobile-nav{
         display: flex;
       }
+      .hero{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        gap: 30px;
+        margin-bottom: 100px;
+      }
+      .hero-bottom{
+        width: 85%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .bg1{
+        top: 200px;
+        height: 17rem;
+        width: 290px;
+        border-top-left-radius: 30%;
+        border-bottom-left-radius: 30%;
+      }
+      .hero-head{
+        text-align: center;
+        width: 100%;
+        font-size: 25px;
+      }
+      .hero-body{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px;
+        font-size: 13px;
+      }
+      .hero-btn{
+        justify-content: center;
+      }
+      .features-body{
+        width: 85%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .features-slider{
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+      }
+      .features-slider-link{
+        text-align: center;
+      }
+      .features-container{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 85%;
+        margin: 0 auto;
+        justify-content: center;
+      }
+      .features-container-body{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px;
+        font-size: 13px;
+      }
+      .bg2{
+        bottom: 258px;
+        height: 18rem;
+        width: 306px;
+        border-top-right-radius: 30%;
+        border-bottom-right-radius: 35%;
+      }
     }
   </style>
 
-  <script src="script.js"></
+  <script src="script.js"></script>
+</body>
+</html>
