@@ -1,6 +1,7 @@
 const closeBtn = document.getElementById("close-btn");
 const hamburger = document.getElementById("hamburger");
 const navigation = document.getElementById("navigation");
+const logo = document.getElementById("logo");
 const submitBtn = document.getElementById("submit-btn");
 const emailInput = document.getElementById("emailInput");
 const err = document.getElementById("error-icon");
@@ -69,4 +70,16 @@ sharing.addEventListener("click", () => {
   speddy.style.borderBottomColor = "transparent";
   bookmarking.style.borderBottomColor = "transparent";
   sharing.style.borderBottomColor = "#fa5757";
+})
+
+hamburger.addEventListener("click", () =>{
+  navigation.style.display = "flex";
+  hamburger.style.display = "none";
+  logo.style.display = "none";
+})
+
+closeBtn.addEventListener("click", () =>{
+  navigation.style.display = "none";
+  logo.style.display = "inline-flex";
+  hamburger.style.display ="inline-flex"
 })
