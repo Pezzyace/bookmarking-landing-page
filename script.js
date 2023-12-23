@@ -6,8 +6,6 @@ const submitBtn = document.getElementById("submit-btn");
 const emailInput = document.getElementById("emailInput");
 const err = document.getElementById("error-icon");
 const errorMsg = document.getElementById("errorMsg");
-const commentContainer = document.querySelectorAll("#question");
-const answer = document.querySelectorAll(".answer");
 const bookmarking = document.getElementById("bookmarking");
 const sharing = document.getElementById("sharing");
 const speddy = document.getElementById("speddy");
@@ -18,6 +16,13 @@ const sectionThreeImg = document.getElementById("section-three-img");
 const sectionTwoImg = document.getElementById("section-two-img");
 const sectionOneImg = document.getElementById("section-one-img");
 const arrow = document.querySelectorAll("#arrow");
+const commentContainer = document.querySelectorAll('.question');
+
+commentContainer.forEach((question)  => {
+  question.addEventListener('click', () => {
+    question.classList.toggle('open');
+  })
+})
 
 
 submitBtn.addEventListener("click", () => {
