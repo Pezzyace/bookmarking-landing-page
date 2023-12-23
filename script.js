@@ -15,12 +15,15 @@ const sectionOne = document.getElementById("section-one");
 const sectionThreeImg = document.getElementById("section-three-img");
 const sectionTwoImg = document.getElementById("section-two-img");
 const sectionOneImg = document.getElementById("section-one-img");
-const arrow = document.querySelectorAll("#arrow");
+const openArrow = document.querySelectorAll(".open-arrow");
+const closeArrow = document.querySelectorAll(".close-arrow");
 const commentContainer = document.querySelectorAll('.question');
 
 commentContainer.forEach((question)  => {
   question.addEventListener('click', () => {
     question.classList.toggle('open');
+    closeArrow[i].style.display = "none";
+    openArrow[i].style.display = "inline-flex"
   })
 })
 
